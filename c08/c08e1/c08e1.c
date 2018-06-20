@@ -124,13 +124,13 @@ int main(int argc, char *argv[])
 		for(i = 0; i < num_dev; i++) {
 			mtd = &goldfish_nand_info.mtd[i];
 			printf("Device %d %s\n", i, mtd->name);
-			printf("Flags............. 0x%x %s\n", i, mtd->flags);
-			printf("Size.............. %d\n", mtd->size);
+			printf("Flags............. 0x%x %x\n", i, mtd->flags);
+			printf("Size.............. %lld\n", mtd->size);
 			printf("Block/Page........ %d\n", mtd->erasesize/mtd->writesize);
 			printf("Block Size........ %d\n", mtd->erasesize);
-			printf("No. of Blocks..... %d\n", mtd->size/mtd->erasesize);
+			printf("No. of Blocks..... %lld\n", mtd->size/mtd->erasesize);
 			printf("Page Size......... %d\n", mtd->writesize);
-			printf("No. of Pages...... %d\n", mtd->size/mtd->writesize);
+			printf("No. of Pages...... %lld\n", mtd->size/mtd->writesize);
 			printf("Extra Data Size... %d\n\n", mtd->oobsize);
 		}
 	}
