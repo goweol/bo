@@ -19,3 +19,8 @@
 *.exe
 *.out
 *.app
+
+**/gcc/
+c06/c06e2/bin/
+c06/c06e2/platforms
+c06/c06e2/system-images
